@@ -39,6 +39,7 @@ jobs:
               rm -rf ./*
 
               git submodule add https://github.com/siegerts/hugo-theme-basic.git themes/hugo-theme-basic
+              echo -e 'BaseURL = "http://example.com"\nTitle = "Hugo Example Site"\n[Params]\nsite_name_jp = "てすとサイト"\nauthor = "Mikirihassha P"\ndescription = "Welcome!"' >> config.toml
               echo 'theme = "hugo-theme-basic"' >> config.toml 
 
               cp -fr ../chk ../TIL/content
