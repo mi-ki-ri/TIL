@@ -50,7 +50,7 @@ jobs:
               rm -rf ./*
 
               git submodule add https://github.com/siegerts/hugo-theme-basic.git themes/hugo-theme-basic
-              echo 'theme = "hugo-theme-basic"' >> TIL/config.toml 
+              echo 'theme = "hugo-theme-basic"' >> config.toml 
 
               cp -fr ../chk ../TIL/content
               hugo
