@@ -16,7 +16,7 @@ jobs:
       - run: cd $HOME/src
       - checkout
       
-      
+      - run: ls
       
       # hugo持ってくる
       - run: hugo new site TIL
