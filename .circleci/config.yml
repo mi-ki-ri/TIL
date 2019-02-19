@@ -56,7 +56,7 @@ jobs:
           command: |    
               git config --global user.email "mi.ki.ri.hassha.p@gmail.com"
               git config --global user.name "mi-ki-ri"
-
+              git remote add origin https://github.com/mi-ki-ri/TIL.git
 
               git add .
               git commit -m "CircleCI for GitHub-Pages"
