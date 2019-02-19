@@ -43,14 +43,14 @@ jobs:
               git config --global user.name "mi-ki-ri"
               git init
               
-              rm -rf ./
+              rm -rf ./*
 
               git remote add origin https://github.com/mi-ki-ri/TIL-Web.git
               git add .
               git commit -m "CircleCI"
               git pull origin master --allow-unrelated-histories --no-edit
-              rm -rf ./
-              
+              rm -rf ./*
+
               mv -f ../chk/* ../TIL/content
               hugo
 
