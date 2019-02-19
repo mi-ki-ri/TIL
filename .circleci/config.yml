@@ -20,7 +20,7 @@ jobs:
 
       # theme
       - run: 
-          command: git clone https://github.com/siegerts/hugo-theme-basic.git
+          command: git clone https://github.com/olOwOlo/hugo-theme-even themes/even
           working_directory: theme
       
       # hugoでTIL作る
@@ -50,7 +50,7 @@ jobs:
               echo 'site_name_jp = "てすとサイト"' >> config.toml
               echo 'author = "Mikirihassha P"' >> config.toml
               echo 'description = "Welcome!"' >> config.toml
-              echo 'theme = "hugo-theme-basic"' >> config.toml 
+              echo 'theme = "themes-even"' >> config.toml 
 
               cp -fr ../chk ../TIL/content
               cp -fr ../theme ../TIL
