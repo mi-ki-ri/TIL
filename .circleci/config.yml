@@ -33,7 +33,7 @@ jobs:
 
       # githubにあったcontentをTILの配下に
       - run:
-          command: mv -f chk/content TIL/content
+          command: mv -f chk/* TIL/content
 
       # ビルドしてユーザページサイトにPushする
       - deploy:
