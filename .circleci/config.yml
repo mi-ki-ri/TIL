@@ -10,39 +10,30 @@ jobs:
 
 
 
-
+      # git get
       - run: apk update && apk add git
       
-      - run:
-          command: ls
-          working_directory: /usr/lib/
-
       # blogリポジトリのデータを取得する
       - run: mkdir chk
       - checkout: 
           path: chk
       
-      - run: ls
-      
-      # hugo持ってくる
+      # hugoでTIL作る
       - run: hugo new site TIL
 
+      # TIL内にgitリポジトリ作り、テーマを拾ってくる
       - run:
           command: git init
           working_directory: TIL
-    
       - run:
           command: git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
           working_directory: TIL
       - run:
           command: echo 'theme = "ananke"' >> TIL/config.toml 
 
+      # githubにあったcontentをTILの配下に
       - run:
           command: mv -f chk/content TIL/content
-
-      - run:
-          command: ls -a
-
 
       # ビルドしてユーザページサイトにPushする
       - deploy:
