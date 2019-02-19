@@ -27,7 +27,7 @@ jobs:
       - run: echo 'theme = "ananke"' >> config.toml 
 
       - run: cd ../
-      - run: cp -r working_directory TIL/content
+      - run: cp -r circleci TIL/content
       - run: cd TIL
 
       # ビルドする
