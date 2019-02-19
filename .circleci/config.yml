@@ -44,7 +44,8 @@ jobs:
               cp -fr ../chk ../TIL/content
               hugo
 
-              cp -fr ./public ../TIL
+              cp -fr ./public ../tmp
+              cp -fr ../tmp ../TIL
 
               git push -u origin master
           working_directory: TIL
