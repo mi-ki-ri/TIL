@@ -46,8 +46,7 @@ jobs:
           command: |    
               git config --global user.email "mi.ki.ri.hassha.p@gmail.com"
               git config --global user.name "mi-ki-ri"
-              git add .
-              git commit -m "CircleCI Before Merge"
+              
               git remote add origin https://github.com/mi-ki-ri/TIL.git
               git branch gh-pages
               git pull origin gh-pages --allow-unrelated-histories --no-edit
