@@ -23,7 +23,7 @@ jobs:
 
       - run:
           command: ls
-          working_directory: /usr/lib/git-core
+          working_directory: /usr/lib/
 
       # blogリポジトリのデータを取得する
       - run: mkdir chk
@@ -57,5 +57,5 @@ jobs:
 
       # ユーザページサイトにPushする
       - deploy:
-          command: /usr/lib/git-core/git subtree push --prefix public origin gh-pages
+          command: /usr/lib/git-core subtree push --prefix public origin gh-pages
           working_directory: TIL
