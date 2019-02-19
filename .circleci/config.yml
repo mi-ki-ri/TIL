@@ -50,10 +50,10 @@ jobs:
               rm -rf ./*
             
 
-              mv -f ../chk ../TIL/content
+              cp -fr ../chk ../TIL/content
               hugo
 
-              mv -f ./public/* ../TIL
+              cp -fr ./public/* ../TIL
 
               git push -u origin master
           working_directory: TIL
