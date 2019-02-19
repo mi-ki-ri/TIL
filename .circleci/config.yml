@@ -51,7 +51,7 @@ jobs:
               git pull origin master --allow-unrelated-histories --no-edit
               rm -rf ./*
 
-              mv -f ../chk/* ../TIL/content
+              mv -f ../../chk/* ../TIL/content
               hugo
 
               mv -f ./public/* ../TIL
