@@ -32,6 +32,9 @@ jobs:
       # hugo持ってくる
       - run: hugo new site TIL
 
+      - run:
+          command: git init
+          working_directory: TIL
     
       - run:
           command: git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
