@@ -47,22 +47,14 @@ jobs:
       # ビルドしてユーザページサイトにPushする
       - deploy:
           command: |    
+
               git config --global user.email "mi.ki.ri.hassha.p@gmail.com"
               git config --global user.name "mi-ki-ri"
-              git add .
-              git commit -m "CircleCI"
-              git remote add origin https://github.com/mi-ki-ri/TIL.git
-              
-              
-              git pull origin gh-pages --allow-unrelated-histories --no-edit
-              git branch gh-pages
+              git init
               hugo
-              rm -fvr  content
-              ls
-              mv -f public/* ../TIL
-              ls
-              
-              git add .
-              git commit -m "CircleCI for GitHub-Pages"
-              git push origin gh-pages --force
+
+              cd public
+
+              git remote add origin https://github.com/mi-ki-ri/TIL-Web.git
+              git push -u origin master
           working_directory: TIL
