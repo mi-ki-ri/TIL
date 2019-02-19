@@ -53,11 +53,13 @@ jobs:
               echo 'theme = "hugo-theme-basic"' >> config.toml 
 
               cp -fr ../chk ../TIL/content
+              cp -fr ../theme/. ../TIL
+              
               hugo
 
               cp -fr ./public/. ../tmp
               cp -fr ../tmp/. ../TIL
-              cp -fr ../theme/. ../TIL
+              
 
               ls
 
