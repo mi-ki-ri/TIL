@@ -54,7 +54,7 @@ jobs:
               # git submodule add https://github.com/siegerts/hugo-theme-basic.git themes/hugo-theme-basic
               echo 'baseURL = "https://mi-ki-ri.github.io/TIL-Web/"' >> config.toml
               echo 'title = "Even - A super concise theme for Hugo"'  >> config.toml
-              echo 'theme = "even"'' >> config.toml
+              echo 'theme = "even"' >> config.toml
 
 
               cat config.toml
