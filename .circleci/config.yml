@@ -38,17 +38,20 @@ jobs:
       # ビルドしてユーザページサイトにPushする
       - deploy:
           command: |    
-
+              
               git config --global user.email "mi.ki.ri.hassha.p@gmail.com"
               git config --global user.name "mi-ki-ri"
               git init
               
+              rm -rf ./
+
               git remote add origin https://github.com/mi-ki-ri/TIL-Web.git
               git add .
               git commit -m "CircleCI"
               git pull origin master --allow-unrelated-histories --no-edit
-              rm -rf ./public
-
+              rm -rf ./
+              
+              mv -f ../chk/* ../TIL/content
               hugo
 
               mv -f ./public/* ../TIL
