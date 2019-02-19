@@ -30,6 +30,8 @@ jobs:
       - run: cp -r circleci TIL/content
       - run: cd TIL
 
+      - run: ls -a
+
       # ビルドする
       - run: hugo
 
