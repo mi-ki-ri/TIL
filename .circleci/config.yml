@@ -49,7 +49,6 @@ jobs:
               git add .
               git commit -m "CircleCI Before Merge"
               git remote add origin https://github.com/mi-ki-ri/TIL.git
-              git pull origin gh-pages --allow-unrelated-histories --no-edit 
               hugo
               mv -f public ./
               git add .
