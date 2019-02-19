@@ -50,7 +50,7 @@ jobs:
               echo 'site_name_jp = "てすとサイト"' >> config.toml
               echo 'author = "Mikirihassha P"' >> config.toml
               echo 'description = "Welcome!"' >> config.toml
-              echo 'theme = "themes-even"' >> config.toml 
+              echo 'theme = "even"' >> config.toml 
 
               cp -fr ../chk ../TIL/content
               cp -fr ../theme ../TIL
