@@ -10,15 +10,14 @@ jobs:
       - run: cd $HOME/src
       - run: hugo new site TIL
       - run: cd TIL
-      - run: git init
-      - run: git remote add origin https://github.com/mi-ki-ri/TIL.git
-      - run: git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
-      - run: echo 'theme = "ananke"' >> config.toml 
 
       # blogリポジトリのデータを取得する
       - checkout
 
       - run: cp -r working_directory content
+
+      - run: git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
+      - run: echo 'theme = "ananke"' >> config.toml 
 
 
       # ビルドする
