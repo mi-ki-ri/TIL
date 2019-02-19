@@ -9,8 +9,9 @@ jobs:
       - run: mkdir $HOME/src
       - run: cd $HOME/src
       - run: rm -rf hugo
-      - run: go get -uv github.com/gohugoio/hugo
+      - run: git clone https://github.com/gohugoio/hugo.git
       - run: cd hugo
+      - run: go install
       - run: hugo new site TIL
       - run: cd TIL
       - run: git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
