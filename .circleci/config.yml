@@ -12,13 +12,13 @@ jobs:
       
       
       # blogリポジトリのデータを取得する
+      - run: mkdir $HOME/src
+      - run: cd $HOME/src
       - checkout
       
       
       
       # hugo持ってくる
-      - run: mkdir $HOME/src
-      - run: cd $HOME/src
       - run: hugo new site TIL
       - run: cd TIL
 
