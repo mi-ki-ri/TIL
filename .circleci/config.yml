@@ -20,15 +20,13 @@ jobs:
       
       # hugo持ってくる
       - run: hugo new site TIL
-      - run: cd TIL
-      - run: ls -a
+
     
       - run: git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
-      - run: echo 'theme = "ananke"' >> config.toml 
+      - run: cp -r themes TIL
+      - run: echo 'theme = "ananke"' >> TIL/config.toml 
 
-      - run: cd ../
-      - run: cp -r circleci $HOME/src/TIL/content
-      - run: cd TIL
+      - run: cp -r circleci TIL/content
 
       - run: ls -a
 
