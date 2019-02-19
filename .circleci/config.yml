@@ -21,7 +21,7 @@ jobs:
       # theme
       - run: 
           command: git clone https://github.com/olOwOlo/hugo-theme-even even
-          working_directory: theme
+          working_directory: themes
       
       # hugoでTIL作る
       - run: hugo new site TIL
