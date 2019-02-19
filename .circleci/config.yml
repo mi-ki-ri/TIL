@@ -9,7 +9,7 @@ jobs:
       - run: mkdir $HOME/src
       - run: cd $HOME/src
       - run: rm -rf hugo
-      - run: go get -u github.com/gohugoio/hugo
+      - run: go get -uv github.com/gohugoio/hugo
       - run: cd hugo
       - run: hugo new site TIL
       - run: cd TIL
