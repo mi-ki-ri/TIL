@@ -10,7 +10,13 @@ jobs:
 
       - run: apk update && apk add git
       
-      
+      # git subtree持ってくる
+      - run: git clone https://github.com/git/git.git
+      - run: 
+          conmmand: make
+          working_directory: git/contrib/subtree 
+
+
       # blogリポジトリのデータを取得する
       - run: mkdir $HOME/src
       - run: cd $HOME/src
@@ -38,3 +44,4 @@ jobs:
       # ユーザページサイトにPushする
       - deploy:
           command: git subtree push --prefix TIL/public origin gh-pages
+          working_directory: TIL/public
