@@ -52,5 +52,5 @@ jobs:
 
       # ユーザページサイトにPushする
       - deploy:
-          command: git subtree push --prefix TIL/public origin gh-pages
-          working_directory: TIL/public
+          command: /usr/lib/git-core/git subtree push --prefix public origin gh-pages
+          working_directory: TIL
