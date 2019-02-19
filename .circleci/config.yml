@@ -22,13 +22,13 @@ jobs:
       - run: hugo new site TIL
       - run: cd TIL
 
-      
-
-      - run: cp -r $HOME/src/working_directory $HOME/src/TIL/content
-
+    
       - run: git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
       - run: echo 'theme = "ananke"' >> config.toml 
 
+      - run: cd ../
+      - run: cp -r working_directory TIL/content
+      - run: cd TIL
 
       # ビルドする
       - run: hugo
