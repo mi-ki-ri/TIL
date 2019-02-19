@@ -42,14 +42,15 @@ jobs:
               git config --global user.email "mi.ki.ri.hassha.p@gmail.com"
               git config --global user.name "mi-ki-ri"
               git init
-              hugo
-              rm -rf ./public/content
-              mv -f ./public/* ../TIL
+              
               git remote add origin https://github.com/mi-ki-ri/TIL-Web.git
               git add .
               git commit -m "CircleCI"
-              
               git pull origin master --allow-unrelated-histories --no-edit
+
+              hugo
+              rm -rf ./public/content
+              mv -f ./public/* ../TIL
 
               git push -u origin master
           working_directory: TIL
