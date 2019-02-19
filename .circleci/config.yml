@@ -26,7 +26,7 @@ jobs:
       - run: mv -f themes TIL
       - run: echo 'theme = "ananke"' >> TIL/config.toml 
 
-      - run: mv -f circleci TIL/content
+      - run: mv -f posts TIL/content
 
       - run: ls -a
 
@@ -35,7 +35,7 @@ jobs:
       - run: ls -a
 
       # ビルドする
-      - run: hugo
+      - run: TIL/hugo
 
       # ユーザページサイトにPushする
       - deploy:
