@@ -53,8 +53,8 @@ jobs:
               mkdir themes/even
               cp -fr ../themes/even/. ../TIL/themes/even
 
-              cp -fr themes/even/exampleSite/. ../TIL
-
+              cp -fr themes/even/layouts/. ../TIL
+              cp -fr themes/even/static/. ../TIL
               #cp -f themes/even/exampleSite/config.toml ../TIL/.
               # git submodule add https://github.com/siegerts/hugo-theme-basic.git themes/hugo-theme-basic
 
