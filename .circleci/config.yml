@@ -2,15 +2,25 @@ version: 2
 jobs:
   build:
     docker:
-      - image: debian:stretch
-
+      - image: circleci/golang:1.8
     steps:
-      - checkout
 
-      - run:
-          name: Greeting
-          command: echo Hello, world.
+      # hugo持ってくる
+      - run: mkdir $HOME/src
+      - run: cd $HOME/src
+      - run: git clone https://github.com/gohugoio/hugo.git
+      - run: cd hugo
+      - run: go install --tags extended
+      - run: git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
 
-      - run:
-          name: Print the Current Time
-          command: date
+
+      # blogリポジトリのデータを取得する
+      - checkout hugo/content/
+
+
+      # ビルドする
+      - run: hugo
+
+      # ユーザページサイトにPushする
+      - deploy:
+          command: 
