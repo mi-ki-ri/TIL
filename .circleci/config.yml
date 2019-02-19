@@ -46,7 +46,11 @@ jobs:
               rm -rf ./public/content
               mv -f ./public/* ../TIL
               git remote add origin https://github.com/mi-ki-ri/TIL-Web.git
+              git add .
+              git commit -m "CircleCI"
+              
               git pull origin master
+
               git add .
               git commit -m "CircleCI"
               git push -u origin master
