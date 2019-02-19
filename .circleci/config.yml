@@ -34,11 +34,14 @@ jobs:
       - run:
           command: git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
           working_directory: TIL
-      - run: echo 'theme = "ananke"' >> TIL/config.toml 
+      - run:
+          command: echo 'theme = "ananke"' >> TIL/config.toml 
 
-      - run: mv -f chk/content TIL/content
+      - run:
+          command: mv -f chk/content TIL/content
 
-      - run: ls -a
+      - run:
+          command: ls -a
 
 
       # ビルドしてユーザページサイトにPushする
