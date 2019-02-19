@@ -37,4 +37,4 @@ jobs:
 
       # ユーザページサイトにPushする
       - deploy:
-          command: git subtree push --prefix public origin gh-pages
+          command: git subtree push --prefix TIL/public origin gh-pages
