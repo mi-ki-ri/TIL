@@ -50,7 +50,7 @@ jobs:
               mkdir themes
               mkdir themes/even
               cp -fr ../themes/even/. ../TIL/themes/even
-              cp -f themes/even/exampleSite/config.toml ../TIL/.
+              #cp -f themes/even/exampleSite/config.toml ../TIL/.
               # git submodule add https://github.com/siegerts/hugo-theme-basic.git themes/hugo-theme-basic
               echo baseURL = "https://mi-ki-ri.github.io/TIL-Web/" >> config.toml
               echo title = "Even - A super concise theme for Hugo" >> config.toml
