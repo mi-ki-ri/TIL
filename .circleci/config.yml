@@ -44,14 +44,10 @@ jobs:
               rm -rf ./*
 
               # git submodule add https://github.com/siegerts/hugo-theme-basic.git themes/hugo-theme-basic
-              echo 'BaseURL = "https://mi-ki-ri.github.io/TIL-Web"' >> config.toml
-              echo 'title = "Hugo Example Site"' >> config.toml 
-              echo 'theme = "even"' >> config.toml 
-              echo '' >> config.toml
-              echo '[Params]' >> config.toml
-              echo 'site_name_jp = "てすとサイト"' >> config.toml
-              echo 'author = "Mikirihassha P"' >> config.toml
-              echo 'description = "Welcome!"' >> config.toml
+              echo baseURL = "https://mi-ki-ri.github.io/TIL-Web/" >> config.toml
+              echo title = "Even - A super concise theme for Hugo" >> config.toml
+              echo theme = "even" >> config.toml
+
               
 
               cp -fr ../chk ../TIL/content
