@@ -20,7 +20,7 @@ jobs:
 
       # theme
       - run: 
-          command: git clone https://github.com/olOwOlo/hugo-theme-even even
+          command: git clone https://github.com/budparr/gohugo-theme-ananke.git ananke
           working_directory: themes
       
       # hugoでTIL作る
@@ -50,12 +50,9 @@ jobs:
 
               cp -fr ../chk ../TIL/content
               mkdir themes
-              mkdir themes/even
-              cp -fr ../themes/even/. ../TIL/themes/even
-              cp -fr ../themes/even/exampleSite/config.toml ../TIL/
+              mkdir themes/ananke
+              cp -fr ../themes/ananke/. ../TIL/themes/ananke
 
-              cp -fr themes/even/layouts/. ../TIL
-              cp -fr themes/even/layouts/. ../TIL
               #cp -f themes/even/exampleSite/config.toml ../TIL/.
               # git submodule add https://github.com/siegerts/hugo-theme-basic.git themes/hugo-theme-basic
 
