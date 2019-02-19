@@ -4,17 +4,27 @@ jobs:
     docker:
       - image: cibuilds/hugo:latest
     steps:
+
+
+
+
       - run: apk update && apk add git
+      
+      
+      # blogリポジトリのデータを取得する
+      - checkout
+      
+      
+      
       # hugo持ってくる
       - run: mkdir $HOME/src
       - run: cd $HOME/src
       - run: hugo new site TIL
       - run: cd TIL
 
-      # blogリポジトリのデータを取得する
-      - checkout
+      
 
-      - run: cp -r working_directory content
+      - run: cp -r $HOME/src/working_directory $HOME/src/TIL/content
 
       - run: git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
       - run: echo 'theme = "ananke"' >> config.toml 
