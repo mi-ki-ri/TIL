@@ -45,7 +45,8 @@ jobs:
               git pull origin master --allow-unrelated-histories --no-edit
               rm -rf ./*
 
-              echo 'baseURL = https://mi-ki-ri.github.io/TIL-Web/"' >> config.toml  
+              echo 'baseURL = "https://mi-ki-ri.github.io/TIL-Web/"' >> config.toml 
+              echo 'theme = "even"'  >> config.toml
               
 
               cp -fr ../chk ../TIL/content
@@ -54,7 +55,7 @@ jobs:
               cp -fr ../themes/even/. ../TIL/themes/even
 
               cp -fr themes/even/layouts/. ../TIL
-              cp -fr themes/even/static/. ../TIL
+              cp -fr themes/even/layouts/. ../TIL
               #cp -f themes/even/exampleSite/config.toml ../TIL/.
               # git submodule add https://github.com/siegerts/hugo-theme-basic.git themes/hugo-theme-basic
 
