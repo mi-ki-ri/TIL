@@ -11,17 +11,19 @@ jobs:
       - run: apk update && apk add git
       
       # git subtree持ってくる
-      - run: git clone https://github.com/git/git.git
+      - run: mkdir src
+      - run: 
+          command: git clone https://github.com/git/git.git
+          working_directory: src
       - run: 
           command: |
               make
               install -m 755 git-subtree /usr/lib/git-core
-          working_directory: git/contrib/subtree 
+          working_directory: src/git/contrib/subtree 
 
 
       # blogリポジトリのデータを取得する
-      - checkout:
-          path: $HOME/src
+      - checkout
       
       - run: ls
       
