@@ -47,7 +47,7 @@ jobs:
       - deploy:
           command: |
               git init
-              git git remote add origin https://github.com/mi-ki-ri/TIL.git
+              git remote add origin https://github.com/mi-ki-ri/TIL.git
               git branch github-pages
               git add .
               git commit -m "CircleCI"
