@@ -52,7 +52,7 @@ jobs:
               git config --global user.name "mi-ki-ri"
               git init
               hugo
-              cd public
+              mv -f ./public/* ../TIL
               git remote add origin https://github.com/mi-ki-ri/TIL-Web.git
               git pull origin master
               git add .
