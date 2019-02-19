@@ -52,9 +52,59 @@ jobs:
               cp -fr ../themes/even/. ../TIL/themes/even
               #cp -f themes/even/exampleSite/config.toml ../TIL/.
               # git submodule add https://github.com/siegerts/hugo-theme-basic.git themes/hugo-theme-basic
-              echo 'baseURL = "https://mi-ki-ri.github.io/TIL-Web/"' >> config.toml
-              echo 'title = "Even - A super concise theme for Hugo"'  >> config.toml
+
+
+              echo 'baseURL = https://mi-ki-ri.github.io/TIL-Web/"' >> config.toml
+              echo 'languageCode = "en"' >> config.toml
+              echo 'defaultContentLanguage = "en"       ' >> config.toml                      # en / zh-cn / ... (This field determines which i18n file to use)
+              echo 'title = "Even - A super concise theme for Hugo"' >> config.toml
+              echo 'preserveTaxonomyNames = true' >> config.toml
+              echo 'enableRobotsTXT = true' >> config.toml
+              echo 'enableEmoji = true' >> config.toml
               echo 'theme = "even"' >> config.toml
+              echo 'enableGitInfo = false' >> config.toml # use git commit log to generate lastmod record # 可根据 Git 中的提交生成最近更新记录。
+
+              # Syntax highlighting by Chroma. NOTE: Don't enable `highlightInClient` and `chroma` at the same time!
+              echo 'pygmentsOptions = "linenos=table"' >> config.toml
+              echo 'pygmentsCodefences = true' >> config.toml
+              echo 'pygmentsUseClasses = true' >> config.toml
+              echo 'pygmentsCodefencesGuessSyntax = true' >> config.toml
+              echo '' >> config.toml
+              echo 'hasCJKLanguage = true  ' >> config.toml   # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
+              echo 'paginate = 5           ' >> config.toml                                   # 首页每页显示的文章数
+              echo 'disqusShortname = ""   ' >> config.toml   # disqus_shortname
+              echo 'googleAnalytics = ""   ' >> config.toml   # UA-XXXXXXXX-X
+              echo 'copyright = ""         ' >> config.toml   # default: author.name ↓        # 默认为下面配置的author.name ↓
+              echo '' >> config.toml
+              echo '[author]              ' >> config.toml    # essential                     # 必需
+              echo '  name = "olOwOlo"' >> config.toml
+              echo '' >> config.toml
+              echo '[sitemap]           ' >> config.toml      # essential                     # 必需
+              echo '  changefreq = "weekly"' >> config.toml
+              echo '  priority = 0.5' >> config.toml
+              echo '  filename = "sitemap.xml"' >> config.toml
+              echo '' >> config.toml
+              echo '[[menu.main]]        ' >> config.toml     # config your menu              # 配置目录
+              echo '  name = "Home"' >> config.toml
+              echo '  weight = 10' >> config.toml
+              echo '  identifier = "home"' >> config.toml
+              echo '  url = "/"' >> config.toml
+              echo '[[menu.main]]' >> config.toml
+              echo '  name = "Archives"' >> config.toml
+              echo '  weight = 20' >> config.toml
+              echo '  identifier = "archives"' >> config.toml
+              echo ' url = "/post/"' >> config.toml
+              echo '[[menu.main]]' >> config.toml
+              echo ' name = "Tags"' >> config.toml
+              echo '  weight = 30' >> config.toml
+              echo '  identifier = "tags"' >> config.toml
+              echo '  url = "/tags/"' >> config.toml
+              echo '[[menu.main]]' >> config.toml
+              echo '  name = "Categories"' >> config.toml
+              echo '  weight = 40' >> config.toml
+              echo '  identifier = "categories"' >> config.toml
+              echo '  url = "/categories/"' >> config.toml
+
 
 
               cat config.toml
