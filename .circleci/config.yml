@@ -42,9 +42,6 @@ jobs:
           command: hugo
           working_directory: TIL
 
-      - run:
-          command: git remote -v 
-
       # ユーザページサイトにPushする
       - deploy:
           command: |
