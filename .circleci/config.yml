@@ -31,6 +31,9 @@ jobs:
       - run: ls -a
 
       - run: cd TIL
+
+      - run: ls -a
+
       # ビルドする
       - run: hugo
 
