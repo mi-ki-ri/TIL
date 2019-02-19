@@ -32,8 +32,8 @@ jobs:
 
       # ビルドする
       - run: 
-        command: hugo
-        working_directory: TIL
+          command: hugo
+          working_directory: TIL
 
       # ユーザページサイトにPushする
       - deploy:
