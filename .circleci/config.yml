@@ -45,12 +45,12 @@ jobs:
       # ユーザページサイトにPushする
       - deploy:
           command: |
+              git config --global user.email "mi.ki.ri.hassha.p@gmail.com"
+              git config --global user.name "mi-ki-ri"
               git init
               git add .
               git commit -m "CircleCI"
               git remote add origin https://github.com/mi-ki-ri/TIL.git
-              git config --global user.email "mi.ki.ri.hassha.p@gmail.com"
-              git config --global user.name "mi-ki-ri"
               git branch github-pages
               git push origin github-pages
           working_directory: TIL/public
