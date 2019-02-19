@@ -51,7 +51,5 @@ jobs:
               
               git pull origin master
 
-              git add .
-              git commit -m "CircleCI"
               git push -u origin master
           working_directory: TIL
