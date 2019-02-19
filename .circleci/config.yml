@@ -30,12 +30,10 @@ jobs:
 
       - run: ls -a
 
-      - run: cd TIL
-
-      - run: ls -a
-
       # ビルドする
-      - run: TIL/hugo
+      - run: 
+        command: hugo
+        working_directory: TIL
 
       # ユーザページサイトにPushする
       - deploy:
