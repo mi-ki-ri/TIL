@@ -56,7 +56,7 @@ jobs:
               ls
               mv -f public/* ../TIL
               ls
-              git pull origin gh-pages --allow-unrelated-histories --no-edit
+              
               git add .
               git commit -m "CircleCI for GitHub-Pages"
               git push origin gh-pages --force
