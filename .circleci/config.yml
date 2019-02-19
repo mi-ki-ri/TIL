@@ -72,7 +72,7 @@ jobs:
               
               ls
               ls themes
-              ls themes/even
+              
 
               git add .
               git commit -m "CircleCI"
