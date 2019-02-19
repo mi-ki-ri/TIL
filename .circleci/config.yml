@@ -20,12 +20,6 @@ jobs:
       
       # hugoでTIL作る
       - run: hugo new site TIL
-
-      # TIL内にgitリポジトリ作り、テーマを拾ってくる
-      - run:
-          command: git init
-          working_directory: TIL
-
       
 
       # ビルドしてユーザページサイトにPushする
