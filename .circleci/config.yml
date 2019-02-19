@@ -54,7 +54,7 @@ jobs:
               # git submodule add https://github.com/siegerts/hugo-theme-basic.git themes/hugo-theme-basic
 
 
-              echo 'baseURL = https://mi-ki-ri.github.io/TIL-Web/"' >> config.toml
+              echo 'baseURL = "https://mi-ki-ri.github.io/TIL-Web/"' >> config.toml
               echo 'languageCode = "en"' >> config.toml
               echo 'defaultContentLanguage = "en"       ' >> config.toml                      # en / zh-cn / ... (This field determines which i18n file to use)
               echo 'title = "Even - A super concise theme for Hugo"' >> config.toml
