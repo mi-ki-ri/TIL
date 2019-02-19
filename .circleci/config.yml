@@ -1,0 +1,58 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: cibuilds/hugo:latest
+    branches:
+        only:
+          - master
+    steps:
+
+
+
+
+      - run: apk update && apk add git
+      
+      - run:
+          command: ls
+          working_directory: /usr/lib/
+
+      # blogリポジトリのデータを取得する
+      - run: mkdir chk
+      - checkout: 
+          path: chk
+      
+      - run: ls
+      
+      # hugo持ってくる
+      - run: hugo new site TIL
+
+      - run:
+          command: git init
+          working_directory: TIL
+    
+      - run:
+          command: git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
+          working_directory: TIL
+      - run: echo 'theme = "ananke"' >> TIL/config.toml 
+
+      - run: mv -f chk/content TIL/content
+
+      - run: ls -a
+
+
+      # ビルドしてユーザページサイトにPushする
+      - deploy:
+          command: |    
+              git config --global user.email "mi.ki.ri.hassha.p@gmail.com"
+              git config --global user.name "mi-ki-ri"
+              git add .
+              git commit -m "CircleCI Before Merge"
+              git remote add origin https://github.com/mi-ki-ri/TIL.git
+              git checkout --orphan gh-pages
+              hugo
+              mv -f public ./
+              git add .
+              git commit -m "CircleCI for GitHub-Pages"
+              git push origin gh-pages
+          working_directory: TIL
