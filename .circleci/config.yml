@@ -60,7 +60,6 @@ jobs:
               cp -fr ./public/. ../tmp
               cp -fr ../tmp/. ../TIL
               
-
               ls
 
               git add .
