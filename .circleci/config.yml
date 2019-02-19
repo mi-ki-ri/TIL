@@ -10,8 +10,6 @@ jobs:
 
       - run: apk update && apk add git
       
-
-      - run: dpkg -L git
       # git subtree持ってくる
       - run: mkdir src
       - run: 
@@ -20,7 +18,7 @@ jobs:
       - run: 
           command: |
               make
-              install -m 755 git-subtree /usr/lib/git-core
+              install -m 755 git-subtree /usr/lib/git-subtree
           working_directory: src/git/contrib/subtree 
 
       - run:
@@ -59,5 +57,5 @@ jobs:
 
       # ユーザページサイトにPushする
       - deploy:
-          command: /usr/lib/git-core push --prefix public origin gh-pages
+          command: /usr/lib/git-subtree push --prefix public origin gh-pages
           working_directory: TIL
