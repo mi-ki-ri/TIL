@@ -53,7 +53,7 @@ jobs:
               echo 'theme = "even"' >> config.toml 
 
               cp -fr ../chk ../TIL/content
-              cp -fr ../themes ../TIL
+              cp -fr ../themes/even/. ../TIL/themes/even
 
               hugo
 
