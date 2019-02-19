@@ -20,9 +20,8 @@ jobs:
 
 
       # blogリポジトリのデータを取得する
-      - run: mkdir $HOME/src
-      - run: cd $HOME/src
-      - checkout
+      - checkout:
+          path: $HOME/src
       
       - run: ls
       
