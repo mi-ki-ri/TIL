@@ -59,7 +59,7 @@ jobs:
 
               
               echo 'BaseURL = "https://mi-ki-ri.github.io/TIL-Web/"' >> config.toml
-              echo 'Title = "Hugo Example Site"' >> config.toml
+              echo 'Title = "TIL - Web"' >> config.toml
               echo 'theme = "gohugo-theme-ananke"' >> config.toml
 
               cat config.toml
