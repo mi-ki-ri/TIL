@@ -13,7 +13,7 @@ jobs:
       # git subtree持ってくる
       - run: git clone https://github.com/git/git.git
       - run: 
-          conmmand: make
+          command: make
           working_directory: git/contrib/subtree 
 
 
