@@ -48,7 +48,7 @@ jobs:
               git config --global user.name "mi-ki-ri"
               git commit -m "CircleCI"
               git remote add origin https://github.com/mi-ki-ri/TIL.git
-              git branch gh-pages
+              git checkout gh-pages
               git add .
               git commit -m "CircleCI"
               git pull origin gh-pages --allow-unrelated-histories --no-edit
