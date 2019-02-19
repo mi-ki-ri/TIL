@@ -47,7 +47,7 @@ jobs:
               git add .
               git commit -m "CircleCI"
               git pull origin master --allow-unrelated-histories --no-edit
-              rm -rf ./public/*
+              rm -rf ./public
 
               hugo
 
