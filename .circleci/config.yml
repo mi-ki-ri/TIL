@@ -23,6 +23,9 @@ jobs:
 
 
       # blogリポジトリのデータを取得する
+      - run:
+          command: ls
+          working_directory: /
       - checkout
       
       - run: ls
