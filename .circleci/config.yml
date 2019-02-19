@@ -52,9 +52,7 @@ jobs:
               git config --global user.name "mi-ki-ri"
               git init
               hugo
-
               cd public
-
               git remote add origin https://github.com/mi-ki-ri/TIL-Web.git
               git push -u origin master
           working_directory: TIL
