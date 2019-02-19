@@ -31,9 +31,7 @@ jobs:
       - run:
           command: echo 'theme = "ananke"' >> TIL/config.toml 
 
-      # githubにあったcontentをTILの配下に
-      - run:
-          command: mv -f chk/* TIL/content
+      
 
       # ビルドしてユーザページサイトにPushする
       - deploy:
