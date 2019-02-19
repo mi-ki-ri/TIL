@@ -11,13 +11,15 @@ jobs:
       - run: git clone https://github.com/gohugoio/hugo.git
       - run: cd hugo
       - run: go install --tags extended
+      - run: hugo new site TIL
+      - run: cd TIL
       - run: git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
-
+      - run: echo 'theme = "ananke"' >> config.toml 
 
       # blogリポジトリのデータを取得する
       - checkout
 
-      - run: cp -r working_directory hugo/content
+      - run: cp -r working_directory content
 
 
       # ビルドする
@@ -25,4 +27,4 @@ jobs:
 
       # ユーザページサイトにPushする
       - deploy:
-          command: 
+          command: git subtree push --prefix public origin gh-pages
