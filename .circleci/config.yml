@@ -47,7 +47,8 @@ jobs:
 
       # ユーザページサイトにPushする
       - deploy:
-          command: |
+          command: |    
+              git config --global core.editor "/usr/bin/vim"
               git config --global user.email "mi.ki.ri.hassha.p@gmail.com"
               git config --global user.name "mi-ki-ri"
               git init
