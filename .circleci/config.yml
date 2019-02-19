@@ -15,7 +15,9 @@ jobs:
 
 
       # blogリポジトリのデータを取得する
-      - checkout hugo/content/
+      - checkout
+
+      - run: cp -r working_directory hugo/content
 
 
       # ビルドする
