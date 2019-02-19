@@ -10,17 +10,6 @@ jobs:
 
       - run: apk update && apk add git
       
-      # git subtree持ってくる
-      - run: mkdir src
-      - run: 
-          command: git clone https://github.com/git/git.git
-          working_directory: src
-      - run: 
-          command: |
-              make
-              install -m 755 git-subtree /usr/lib/git-subtree
-          working_directory: src/git/contrib/subtree 
-
       - run:
           command: ls
           working_directory: /usr/lib/
@@ -54,8 +43,13 @@ jobs:
           working_directory: TIL
 
 
-
       # ユーザページサイトにPushする
       - deploy:
-          command: /usr/lib/git-subtree push --prefix public origin gh-pages
-          working_directory: TIL
+          command: |
+              git init
+              git git remote add origin https://github.com/mi-ki-ri/TIL.git
+              git branch github-pages
+              git add .
+              git commit -m "CircleCI"
+              git push origin github-pages
+          working_directory: TIL/public
