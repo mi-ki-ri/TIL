@@ -57,7 +57,7 @@ jobs:
               git pull origin gh-pages --allow-unrelated-histories --no-edit
               git branch gh-pages
               hugo
-              rm -f -r content
+              rm -fvr  content
               ls
               mv -f public/* ../TIL
               ls
