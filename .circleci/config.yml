@@ -23,13 +23,14 @@ jobs:
 
     
       - run: git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
-      - run: cp -r themes TIL
+      - run: mv -t -i themes TIL
       - run: echo 'theme = "ananke"' >> TIL/config.toml 
 
-      - run: cp -r circleci TIL/content
+      - run: mv -t -i circleci TIL/content
 
       - run: ls -a
 
+      - run: cd TIL
       # ビルドする
       - run: hugo
 
