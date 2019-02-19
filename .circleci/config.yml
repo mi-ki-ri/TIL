@@ -49,7 +49,7 @@ jobs:
               git config --global user.name "mi-ki-ri"
               git init
               git add .
-              git commit -m "CircleCI"
+              git commit -m "CircleCI for GitHub-Pages"
               git remote add origin https://github.com/mi-ki-ri/TIL.git
               git branch github-pages
               git push origin github-pages
