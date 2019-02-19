@@ -49,7 +49,7 @@ jobs:
               git add .
               git commit -m "CircleCI"
               
-              git pull origin master
+              git pull origin master --allow-unrelated-histories --no-edit
 
               git push -u origin master
           working_directory: TIL
