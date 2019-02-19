@@ -53,7 +53,7 @@ jobs:
               git pull origin gh-pages --allow-unrelated-histories --no-edit
               hugo
               ls
-              mv -f public ../TIL
+              mv -f public/*.* ../TIL
               ls
               git pull origin gh-pages --allow-unrelated-histories --no-edit
               git add .
