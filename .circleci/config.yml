@@ -58,7 +58,9 @@ jobs:
               mkdir themes
               mkdir themes/even
               cp -fr ../themes/even/. ../TIL/themes/even
-              cp -f themes/even/exanmpleSite/config.toml ../TIL/.
+              cp -f themes/even/exampleSite/config.toml ../TIL/.
+
+              cat config.toml
 
               hugo
 
