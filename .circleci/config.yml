@@ -13,7 +13,9 @@ jobs:
       # git subtree持ってくる
       - run: git clone https://github.com/git/git.git
       - run: 
-          command: install -m 755 git-subtree /usr/lib/git-core
+          command: |
+              make
+              install -m 755 git-subtree /usr/lib/git-core
           working_directory: git/contrib/subtree 
 
 
