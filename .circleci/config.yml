@@ -17,6 +17,11 @@ jobs:
       - run: mkdir chk
       - checkout: 
           path: chk
+
+      # theme
+      - run: 
+          command: git clone https://github.com/siegerts/hugo-theme-basic.git
+          working_directory: theme
       
       # hugoでTIL作る
       - run: hugo new site TIL
@@ -39,7 +44,12 @@ jobs:
               rm -rf ./*
 
               git submodule add https://github.com/siegerts/hugo-theme-basic.git themes/hugo-theme-basic
-              echo -e 'BaseURL = "http://example.com"\nTitle = "Hugo Example Site"\n[Params]\nsite_name_jp = "てすとサイト"\nauthor = "Mikirihassha P"\ndescription = "Welcome!"' >> config.toml
+              echo 'BaseURL = "https://mi-ki-ri.github.io/TIL-Web"' >> config.toml
+              echo 'title = "Hugo Example Site"' >> config.toml 
+              echo '[Params]' >> config.toml
+              echo 'site_name_jp = "てすとサイト"' >> config.toml
+              echo 'author = "Mikirihassha P"' >> config.toml
+              echo 'description = "Welcome!"' >> config.toml
               echo 'theme = "hugo-theme-basic"' >> config.toml 
 
               cp -fr ../chk ../TIL/content
@@ -47,6 +57,7 @@ jobs:
 
               cp -fr ./public/. ../tmp
               cp -fr ../tmp/. ../TIL
+              cp -fr ../theme/. ../TIL
 
               ls
 
