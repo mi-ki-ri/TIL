@@ -33,11 +33,12 @@ jobs:
       - run: hugo new site TIL
 
     
-      - run: git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
-      - run: mv -f themes TIL
+      - run:
+          command: git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
+          working_directory: TIL
       - run: echo 'theme = "ananke"' >> TIL/config.toml 
 
-      - run: mv -f content TIL/content
+      - run: mv -f chk/content TIL/content
 
       - run: ls -a
 
