@@ -44,8 +44,8 @@ jobs:
               cp -fr ../chk ../TIL/content
               hugo
 
-              cp -fr ./public ../tmp
-              cp -fr ../tmp ../TIL
+              cp -fr ./public/* ../tmp
+              cp -fr ../tmp/* ../TIL
 
               ls
 
