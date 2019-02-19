@@ -21,6 +21,9 @@ jobs:
               install -m 755 git-subtree /usr/lib/git-core
           working_directory: src/git/contrib/subtree 
 
+      - run:
+          command: ls
+          working_directory: /usr/lib/
 
       # blogリポジトリのデータを取得する
       - run: mkdir chk
@@ -49,6 +52,8 @@ jobs:
       - run: 
           command: hugo
           working_directory: TIL
+
+
 
       # ユーザページサイトにPushする
       - deploy:
