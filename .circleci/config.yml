@@ -8,7 +8,8 @@ jobs:
       # hugo持ってくる
       - run: mkdir $HOME/src
       - run: cd $HOME/src
-      - run: go get -d github.com/gohugoio/hugo
+      - run: rm -f hugo
+      - run: go get github.com/gohugoio/hugo
       - run: cd hugo
       - run: hugo new site TIL
       - run: cd TIL
