@@ -54,8 +54,8 @@ jobs:
               git add .
               git commit -m "CircleCI for GitHub-Pages"
               git remote add origin https://github.com/mi-ki-ri/TIL.git
-              git branch github-pages
-              git merge --allow-unrelated-histories origin/github-pages
+              git branch docs
+              git merge --allow-unrelated-histories origin/docs
               
-              git push origin github-pages
+              git push origin docs
           working_directory: TIL/public
