@@ -3,6 +3,9 @@ jobs:
   build:
     docker:
       - image: cibuilds/hugo:latest
+    branches:
+        only:
+          - master
     steps:
 
 
